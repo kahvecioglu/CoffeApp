@@ -1,0 +1,58 @@
+import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+
+class MyDrawer extends StatelessWidget {
+  const MyDrawer({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Drawer(
+      backgroundColor: Colors.brown[700],
+      child: ListView(children: [
+        Padding(padding: EdgeInsets.only(top: 70)),
+        Image.asset(
+          "lib/images/latte.png",
+          width: 170,
+          height: 170,
+        ),
+        SizedBox(
+          height: 70,
+        ),
+        ListTile(
+          leading: Icon(Icons.home, size: 50, color: Colors.brown[900]),
+          title: Text(
+            "Ana Sayfa",
+            style: TextStyle(fontSize: 30, color: Colors.brown[400]),
+          ),
+          onTap: () => Navigator.of(context).pop(),
+        ),
+        ListTile(
+          leading: Icon(
+            Icons.question_mark_sharp,
+            color: Colors.brown[900],
+            size: 50,
+          ),
+          title: Text(
+            "Hakkında",
+            style: TextStyle(fontSize: 30, color: Colors.brown[400]),
+          ),
+          onTap: () => Navigator.of(context).pop(),
+        ),
+        ListTile(
+          leading: Icon(
+            Icons.exit_to_app,
+            color: Colors.brown[900],
+            size: 50,
+          ),
+          title: Text(
+            "Çıkış",
+            style: TextStyle(fontSize: 30, color: Colors.brown[400]),
+          ),
+          onTap: () {
+            SystemNavigator.pop();
+          },
+        ),
+      ]),
+    );
+  }
+}

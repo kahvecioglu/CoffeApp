@@ -3,37 +3,9 @@ import 'package:kendicoffeshop/modeller/coffemodel.dart';
 
 class ProviderModel extends ChangeNotifier {
 // listeyi oluştur
-  final List<CoffeModel> _kahveler = [
-    CoffeModel(
-        isim: "Black Coffe",
-        fiyat: "50",
-        resim: "lib/images/black_coffe.png",
-        boyut: "M",
-        adet: 1),
-    CoffeModel(
-        isim: "Expresso",
-        fiyat: "70",
-        resim: "lib/images/expresso.png",
-        boyut: "M",
-        adet: 1),
-    CoffeModel(
-        isim: "İced Coffe",
-        fiyat: "80",
-        resim: "lib/images/iced_coffe.png",
-        boyut: "M",
-        adet: 1),
-    CoffeModel(
-        isim: "Latte",
-        fiyat: "65",
-        resim: "lib/images/latte.png",
-        boyut: "M",
-        adet: 1)
-  ];
 
   List<CoffeModel> _secilenkahveler = [];
   List<CoffeModel> _secilenkahve = [];
-
-  List<CoffeModel> get kahveler => _kahveler;
 
   List<CoffeModel> get secilenkahveler => _secilenkahveler;
 

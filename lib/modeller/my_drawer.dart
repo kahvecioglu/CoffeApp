@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:kendicoffeshop/sayfalar/signin_page.dart';
 
 class MyDrawer extends StatelessWidget {
-  const MyDrawer({Key? key}) : super(key: key);
+  final String user;
+  const MyDrawer({Key? key, required this.user}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -15,6 +17,7 @@ class MyDrawer extends StatelessWidget {
           width: 170,
           height: 170,
         ),
+        Text(user),
         SizedBox(
           height: 70,
         ),
@@ -49,7 +52,8 @@ class MyDrawer extends StatelessWidget {
             style: TextStyle(fontSize: 30, color: Colors.brown[400]),
           ),
           onTap: () {
-            SystemNavigator.pop();
+            Navigator.pushReplacement(
+                context, MaterialPageRoute(builder: (context) => SignInPage()));
           },
         ),
       ]),

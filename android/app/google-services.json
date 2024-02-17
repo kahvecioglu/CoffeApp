@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "613647940754",
+    "project_id": "todoapp-e97ba",
+    "storage_bucket": "todoapp-e97ba.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:613647940754:android:cf76882735bc94f897ba4b",
+        "android_client_info": {
+          "package_name": "com.example.kendicoffeshop"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD8QxcWPoWqaH3B5NOSjU4fx2uYVCVo_50"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

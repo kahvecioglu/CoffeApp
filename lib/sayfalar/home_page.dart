@@ -5,7 +5,8 @@ import 'package:kendicoffeshop/sayfalar/market_page.dart';
 import 'package:kendicoffeshop/sayfalar/odemesayfa.dart';
 
 class HomePage extends StatefulWidget {
-  const HomePage({super.key});
+  final String user;
+  const HomePage({super.key, required this.user});
 
   @override
   State<HomePage> createState() => _HomePageState();
@@ -36,7 +37,7 @@ class _HomePageState extends State<HomePage> {
         ),
         backgroundColor: Colors.brown[700],
       ),
-      drawer: MyDrawer(),
+      drawer: MyDrawer(user: widget.user),
       bottomNavigationBar: MyBottomNavBar(
         onTabChange: (index) => Secilensayfa(index),
       ),

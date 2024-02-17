@@ -34,9 +34,9 @@ class _KahveBoyutuSayfasiState extends State<KahveBoyutuSayfasi> {
               CoffeModel secilenkahve = value.secilenkahve[index];
 
               return CoffeBoyutCard(
-                resim: secilenkahve.resim,
-                isim: secilenkahve.isim,
-                fiyat: secilenkahve.fiyat,
+                resim: secilenkahve.imageUrl,
+                isim: secilenkahve.name,
+                fiyat: secilenkahve.price,
                 adet: 1,
                 boyut: "  ",
               );

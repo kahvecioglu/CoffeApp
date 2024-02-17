@@ -1,3 +1,5 @@
+import 'dart:ffi';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:kendicoffeshop/modeller/coffemodel.dart';
@@ -8,7 +10,7 @@ import 'package:provider/provider.dart';
 class CoffeBoyutCard extends StatefulWidget {
   final String resim;
   final String isim;
-  final String fiyat;
+  final double fiyat;
   int adet;
   String boyut = "M";
 
@@ -45,9 +47,9 @@ class _CoffeBoyutCardState extends State<CoffeBoyutCard> {
   List<bool> isSelected = [false, true, false];
   void SepeteEkle() {
     CoffeModel coffeModel = CoffeModel(
-        isim: widget.isim,
-        fiyat: widget.fiyat,
-        resim: widget.resim,
+        name: widget.isim,
+        price: widget.fiyat,
+        imageUrl: widget.resim,
         boyut: widget.boyut,
         adet: widget.adet);
 
@@ -85,7 +87,7 @@ class _CoffeBoyutCardState extends State<CoffeBoyutCard> {
             style: TextStyle(fontSize: 40),
           ),
           Text(
-            widget.fiyat + " TL",
+            widget.fiyat.toString() + " TL",
             style: TextStyle(fontSize: 25),
           ),
           SizedBox(

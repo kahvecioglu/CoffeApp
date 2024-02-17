@@ -22,13 +22,13 @@ class CoffeCardiki extends StatelessWidget {
       padding: EdgeInsets.symmetric(vertical: 25),
       child: ListTile(
         title: Text(
-          kahve.isim,
+          kahve.name,
           style: TextStyle(fontSize: 30, color: Colors.brown[900]),
         ),
         subtitle: Row(
           children: [
             Text(
-              kahve.fiyat + " TL",
+              kahve.price.toString() + " TL",
               style: TextStyle(color: Colors.brown[400], fontSize: 20),
             ),
             SizedBox(
@@ -45,7 +45,7 @@ class CoffeCardiki extends StatelessWidget {
                 style: TextStyle(color: Colors.brown[200], fontSize: 25)),
           ],
         ),
-        leading: Image.asset(kahve.resim),
+        leading: Image.asset(kahve.imageUrl),
         trailing: IconButton(
           onPressed: onPressed,
           icon: icon,

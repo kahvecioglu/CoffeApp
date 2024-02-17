@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:kendicoffeshop/modeller/providermodel.dart';
+import 'package:kendicoffeshop/sayfalar/admin_page.dart';
 import 'package:kendicoffeshop/sayfalar/home_page.dart';
 import 'package:kendicoffeshop/sayfalar/signin_page.dart';
 import 'package:provider/provider.dart';
@@ -13,19 +14,19 @@ void main() async {
   Platform.isAndroid
       ? await Firebase.initializeApp(
           options: const FirebaseOptions(
-          apiKey: "AIzaSyD8QxcWPoWqaH3B5NOSjU4fx2uYVCVo_50",
-          appId: "1:613647940754:android:cf76882735bc94f897ba4b",
-          messagingSenderId: "613647940754",
-          projectId: "todoapp-e97ba",
-        ))
+            apiKey: "AIzaSyD8QxcWPoWqaH3B5NOSjU4fx2uYVCVo_50",
+            appId: "1:613647940754:android:cf76882735bc94f897ba4b",
+            messagingSenderId: "613647940754",
+            projectId: "todoapp-e97ba",
+          ),
+        )
       : await Firebase.initializeApp();
   runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  const MyApp({Key? key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(

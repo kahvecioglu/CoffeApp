@@ -2,7 +2,9 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:kendicoffeshop/modeller/coffe_card.dart';
 import 'package:kendicoffeshop/modeller/coffemodel.dart';
+import 'package:kendicoffeshop/modeller/providermodel.dart';
 import 'package:kendicoffeshop/sayfalar/kahve_boyutu_sayfasi.dart';
+import 'package:provider/provider.dart';
 
 class AnaSayfa extends StatelessWidget {
   @override
@@ -27,7 +29,7 @@ class AnaSayfa extends StatelessWidget {
                 return CoffeCard(
                   kahve: kahveler[index],
                   icon: Icon(Icons.add),
-                  onPressed: () => KahveEkle(context, kahveler[index]),
+                  onPressed: () => KahveEkle(kahveler[index], context),
                 );
               },
             ),
@@ -37,15 +39,12 @@ class AnaSayfa extends StatelessWidget {
     );
   }
 
-  void KahveEkle(BuildContext context, CoffeModel coffeModel) {
+  void KahveEkle(CoffeModel coffeModel, BuildContext context) {
+    Provider.of<ProviderModel>(context, listen: false).kahvesec(coffeModel);
     Navigator.push(
-      context,
-      MaterialPageRoute(
-        builder: (context) => KahveBoyutuSayfasi(),
-        settings: RouteSettings(
-          arguments: coffeModel,
-        ),
-      ),
-    );
+        context,
+        MaterialPageRoute(
+          builder: (context) => KahveBoyutuSayfasi(),
+        ));
   }
 }

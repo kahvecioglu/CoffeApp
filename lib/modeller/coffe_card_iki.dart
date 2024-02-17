@@ -45,7 +45,7 @@ class CoffeCardiki extends StatelessWidget {
                 style: TextStyle(color: Colors.brown[200], fontSize: 25)),
           ],
         ),
-        leading: Image.asset(kahve.imageUrl),
+        leading: Image.network(kahve.imageUrl),
         trailing: IconButton(
           onPressed: onPressed,
           icon: icon,

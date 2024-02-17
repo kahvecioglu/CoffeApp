@@ -10,7 +10,7 @@ import 'package:provider/provider.dart';
 class CoffeBoyutCard extends StatefulWidget {
   final String resim;
   final String isim;
-  final double fiyat;
+  final String fiyat;
   int adet;
   String boyut = "M";
 
@@ -74,7 +74,7 @@ class _CoffeBoyutCardState extends State<CoffeBoyutCard> {
     return Center(
       child: Column(
         children: [
-          Image.asset(
+          Image.network(
             widget.resim,
             width: 180,
             height: 180,

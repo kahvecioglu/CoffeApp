@@ -27,7 +27,7 @@ class CoffeCard extends StatelessWidget {
           kahve.price.toString() + " TL",
           style: TextStyle(color: Colors.brown[400], fontSize: 20),
         ),
-        leading: Image.asset(kahve.imageUrl),
+        leading: Image.network(kahve.imageUrl),
         trailing: IconButton(
           onPressed: onPressed,
           icon: icon,

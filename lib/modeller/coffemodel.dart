@@ -1,6 +1,6 @@
 class CoffeModel {
   final String name;
-  final double price;
+  final String price;
   final String imageUrl;
   final String boyut;
   final int adet;
@@ -16,7 +16,7 @@ class CoffeModel {
   factory CoffeModel.fromJson(Map<String, dynamic> json) {
     return CoffeModel(
       name: json['name'] ?? '',
-      price: json['price'] ?? 0.0,
+      price: json['price'] ?? 0.0.toString(),
       imageUrl: json['imageUrl'] ?? '',
       boyut: json['boyut'] ?? '',
       adet: json['adet'] ?? 0,

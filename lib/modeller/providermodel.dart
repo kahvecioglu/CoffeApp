@@ -35,4 +35,9 @@ class ProviderModel extends ChangeNotifier {
     _secilenkahve.clear();
     notifyListeners();
   }
+
+  void clear() {
+    secilenkahveler.clear();
+    notifyListeners();
+  }
 }

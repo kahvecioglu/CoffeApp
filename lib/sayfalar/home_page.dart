@@ -21,9 +21,14 @@ class _HomePageState extends State<HomePage> {
     });
   }
 
-  final List<Widget> pages = [AnaSayfa(), OdemeSayfa()];
   @override
   Widget build(BuildContext context) {
+    final List<Widget> pages = [
+      AnaSayfa(),
+      OdemeSayfa(
+        user: widget.user,
+      )
+    ];
     return Scaffold(
       backgroundColor: Colors.brown[700],
       appBar: AppBar(
